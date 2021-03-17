@@ -1,5 +1,3 @@
-# Projeto Medicina
-
 # Sobre o projeto:
 O projeto a ser realizado está relacionado ao meio de saúde, principalmente para a detecção de doenças epidemiológicas. No conceito inicial, o usuário utilizará de um aplicativo mobile para a consulta de doenças. 
 
