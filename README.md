@@ -6,7 +6,16 @@ Ao introduzir, por meio de teclado, os sintomas que o aflige, o usuário poderá
 
 # Tecnologias:
 As tecnologias iniciais que serão utilizadas são:
-- Site: HTML, CSS, Javascript, Java;
+- Site: HTML, CSS, JQuery, Java;
 - Banco de Dados: Oracle, SQL;
 - Cloud: Azure;
 - Deploy: Docker;
+
+# Requisitos:
+- Desenho das telas no Figma;
+- Construção do site com a busca, conectado ao Banco de Dados;
+- Modelagem do Banco de Dados;
+- Inserção de dados no Banco;
+- Configuração da Cloud;
+- Testes e anotações de feedback;
+- Melhorias e Finalizações;
