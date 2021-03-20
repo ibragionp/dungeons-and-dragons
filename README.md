@@ -6,6 +6,7 @@ Ao introduzir, por meio de teclado, os sintomas que o aflige, o usuário poderá
 
 # Tecnologias:
 As tecnologias iniciais que serão utilizadas são:
-- HTML, CSS, Javascript;
-- GPS;
-- Banco de Dados;
+- Site: HTML, CSS, Javascript, Java;
+- Banco de Dados: Oracle, SQL;
+- Cloud: Azure;
+- Deploy: Docker;
