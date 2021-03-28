@@ -1,15 +1,15 @@
 # Sobre o projeto:
-O projeto a ser realizado está relacionado ao meio de saúde, principalmente para a detecção de doenças epidemiológicas. No conceito inicial, o usuário utilizará de um _site_ para a consulta de doenças. 
+O projeto a ser realizado está relacionado à área de entreterimento, com foco em jogos. Ele será um site que ajudará aos usuários visualizarem, editarem, e personalizarem suas fichas de personagens para o jogo de _Roleplaying-Game Dungeons & Dragons_, baseando-se por contas de usuário para cada personagem.
 
 # Funcionalidade:
-Ao introduzir, por meio de teclado, os sintomas que o aflige, o usuário poderá buscar em um banco de dados quais doenças estão relacionadas a sua enfermidade. Após a busca, o _site_ mostrará na tela, em forma de uma lista _drop down_, todas as doenças que possuem um ou mais sintomas relacionados ao usuário. No topo da lista são apresentadas as doenças que possuem maior porcentagem de resultado positivo. Ao escolher aquela doença, ele será levado a uma breve descrição dela, mais sintomas que poderão aparecer, formas de tratamento medicinal imediato e uma lista de hospitais que estão próximos ao local do usuário, baseado em GPS. Para cada doença também será apresentada um “Nível de urgência”, marcado mais brando ao mais imediato a partir das cores azul, verde, amarelo, laranja e vermelho.
+Ao entrar no site, o usuário poderá se cadastrar, ou conectar-se com um usuário existente para visualizar os personagens que possui. Após se conectar, o usuário poderá cadastrar novos personagens ou visualizar os que já possui. Ao cadastrar um novo personagem, o usuário será levado até uma tela que o fará escolher dentre raças, classes, abilidades, perícias, equipamento e o dará a possibilidade de descrever a personalidade de seu personagem. Quando o processo for finalizado e o personagem é salvo, o usuário poderá visualizar a ficha finalizada baseado em suas escolhas.
 
 # Tecnologias:
 As tecnologias iniciais que serão utilizadas são:
-- Site: HTML, CSS, JQuery, Java;
-- Banco de Dados: Oracle, SQL;
+- Front-end: HTML, CSS, Javascript, Vue.js;
+- Back-end: Java, Springboot, JPA, REST.
+- Banco de Dados: MySQL;
 - Cloud: Azure;
-- Deploy: Docker;
 
 # Requisitos:
 - Desenho das telas no Figma;
