@@ -6,11 +6,82 @@ Ao entrar no site, o usuário poderá se cadastrar, ou conectar-se com um usuár
 
 # Tecnologias:
 As tecnologias iniciais que serão utilizadas são:
-- Front-end: HTML, CSS, Javascript, Vue.js;
-- Back-end: Java, Springboot, JPA, REST.
-- Banco de Dados: MySQL;
-- Cloud: Azure;
+## Front-end: 
+### HTML:
+#### Porque usar?
+HTML é a sigla para Hyper Text Markup Language, ou seja, linguagem de marcação de hipertexto. Ela é utilizada como marcação para desenvolver páginas e documentos eletrônicos para a internet. Isso significa que ela garante a formatação ideal para sites, e ainda é o método mais básico ao qual sites se baseiam.
 
+#### Benefícios?
+Diversos dispositivos interpretam os documentos desenvolvidos com o HTML, não dependendo do tamanho da tela, resolução, variação de cor. Até mesmo os dispositivos próprios para deficientes visuais e auditivos ou dispositivos móveis e portáteis são capazes de interpretar o documento formatado com essa linguagem.
+
+--------------------------
+### CSS:
+#### Porque usar?
+A ser escrito.
+
+#### Benefícios?
+A ser escrito.
+
+--------------------------
+### Javascript:
+#### Porque usar?
+A ser escrito.
+
+#### Benefícios?
+A ser escrito.
+
+--------------------------
+### Vue.js:
+#### Porque usar?
+A ser escrito.
+
+#### Benefícios?
+A ser escrito.
+
+---------------------------
+## Back-end: 
+### Java:
+#### Porque usar?
+A ser escrito.
+
+#### Benefícios?
+A ser escrito.
+
+--------------------------
+### Sprongboot:
+#### Porque usar?
+A ser escrito.
+
+#### Benefícios?
+A ser escrito.
+
+--------------------------
+### REST:
+#### Porque usar?
+A ser escrito.
+
+#### Benefícios?
+A ser escrito.
+
+---------------------------
+## Banco de Dados: 
+### MySQL:
+#### Porque usar?
+A ser escrito.
+
+#### Benefícios?
+A ser escrito.
+
+---------------------------
+## Cloud: 
+### Azure:
+#### Porque usar?
+A ser escrito.
+
+#### Benefícios?
+A ser escrito.
+
+---------------------------
 # Requisitos:
 - Desenho das telas no Figma;
 - Construção do site com a busca, conectado ao Banco de Dados;
