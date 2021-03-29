@@ -84,7 +84,7 @@ A ser escrito.
 ## Banco de Dados: 
 ### MySQL:
 #### Porque usar?
-A ser escrito. Teste
+A ser escrito.
 
 #### Benefícios?
 A ser escrito.
