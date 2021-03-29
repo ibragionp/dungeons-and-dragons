@@ -52,10 +52,17 @@ Criar componentes com VueJS é muito simples e objetivo. Sua API é intuitiva e 
 ## Back-end: 
 ### Java:
 #### Porque usar?
-A ser escrito.
+Java é uma linguagem orientada a objetos, o que a permite a aplicação do conceito de classes e hierarquias para diferentes pontos do site e do banco de dados, utilizando cada tabela como uma entidade ou classe própria. Usando JPA, é possível programar as relações entre as diferentes entidades, com diferentes identidades.
 
 #### Benefícios?
-A ser escrito.
+- Orientação a objetos;
+- Portabilidade;
+- Recursos de Rede;
+- Segurança;
+- Possui muitas bibliotecas a serem utilizadas;
+- Possui facilidades para criação de programas distribuídos e multi-thread;
+- Desalocação de memória automática por processo de garbage collector;
+- Carga Dinâmica de Código.
 
 --------------------------
 ### Springboot:
