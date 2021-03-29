@@ -17,26 +17,36 @@ Diversos dispositivos interpretam os documentos desenvolvidos com o HTML, não d
 --------------------------
 ### CSS:
 #### Porque usar?
-A ser escrito.
+A linguagem CSS complementa o HTML, que tem como função apenas a estruturação e marcação dos principais componentes das páginas. Com o CSS é podemos otimizar o aspecto visual das páginas, de uma maneira mais organizada e menos complexa na hora realizar manutenção.
 
 #### Benefícios?
-A ser escrito.
+- Possibilidade do controle do layout de vários documentos a partir de um único arquivo;
+- Aplicação de layouts diferentes de acordo com o dispositivo utilizado, possibilitando o layout responsivo;
+- Possibilidade de manter a mesma formatação em diferentes navegadores;
+- Aplicação de técnicas mais sofisticadas de desenvolvimento;
+- Menor consumo de banda e melhor desempenho devido ao reuso do mesmo código de formatação em várias páginas.
 
 --------------------------
 ### Javascript:
 #### Porque usar?
-A ser escrito.
+Devido a sua grande variedade de funcionalidades e sendo que a maioria dos sites atualmente a utiliza, a linguagem foi escolhida pois ela pode ser aplicada tanto em back-end como em front-end se for necessário.
 
 #### Benefícios?
-A ser escrito.
+- Alta compatibilidade com plataformas, sistemas e navegadores web.
+- Faz com que as páginas na internet sejam mais dinâmicas e interativas, características essenciais do UX.
+- Os navegadores interpretam a linguagem por conta própria, tirando a necessidade de usar um compilador.
+- Erros de programação são mais fáceis de encontrar e de corrigir.
+- Executa comportamentos específicos em uma página, como cliques e efeitos personalizados.
 
 --------------------------
 ### Vue.js:
 #### Porque usar?
-A ser escrito.
+Criar componentes com VueJS é muito simples e objetivo. Sua API é intuitiva e simples, e seu sistema de template é previsível e agradável. Possui uma arquitetura enxuta, que requer uma configuração mínima na criação de um projeto e pode ser facilmente integrado com uma aplicação já existente através de uma simples tag script. 
 
 #### Benefícios?
-A ser escrito.
+- Redução de complexidade;
+- Documentação detalhada;
+- Flexibilidade e adaptabilidade;
 
 ---------------------------
 ## Back-end: 
@@ -48,7 +58,7 @@ A ser escrito.
 A ser escrito.
 
 --------------------------
-### Sprongboot:
+### Springboot:
 #### Porque usar?
 A ser escrito.
 
@@ -83,10 +93,16 @@ A ser escrito.
 
 ---------------------------
 # Requisitos:
-- Desenho das telas no Figma;
+
+- Modelagem do banco de dados
+- Criação do banco de dados no MySQL
+- Desenho das telas no figma
 - Construção do site com a busca, conectado ao Banco de Dados;
-- Modelagem do Banco de Dados;
 - Inserção de dados no Banco;
 - Configuração da Cloud;
 - Testes e anotações de feedback;
-- Melhorias e Finalizações;
+- Usuário pode se cadastrar;
+- Usuário pode visualizar os seus personagens;
+- Administrador pode se cadastrar;
+- Administrador pode ver personagem de todos;
+- Melhorias e Finalizações.
