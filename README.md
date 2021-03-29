@@ -93,7 +93,7 @@ A ser escrito.
 ## Cloud: 
 ### Azure:
 #### Porque usar?
-A ser escrito.
+Ao utilizar da Azure Cloud e Azure DevOps, estaremos garantindo uma organização e estaremos deixando todos os requisitos de acordo com a cultura DevOps
 
 #### Benefícios?
 A ser escrito.
