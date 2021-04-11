@@ -8,27 +8,30 @@ public class PersistenceManager {
     private static PersistenceManager instance;
     private PersistenceManager(){}
 
-    protected EntityManagerFactory emf;
+    protected EntityManagerFactory entityManagerFactory;
 
     public static PersistenceManager getInstance(){
         if(instance == null){
             instance = new PersistenceManager();
-        }   return instance;
+        }
+        return instance;
     }
 
     public EntityManagerFactory getEntityManagerFactory(){
-        if(emf == null){
+        if(entityManagerFactory == null){
             createEntityManagerFactory();
-        }   return emf;
+        }
+        return entityManagerFactory;
     }
 
     public EntityManager getEntityManager(){
-        if(emf == null){
+        if(entityManagerFactory == null){
             createEntityManagerFactory();
-        }   return emf.createEntityManager();
+        }
+        return entityManagerFactory.createEntityManager();
     }
 
     private void createEntityManagerFactory(){
-        emf = Persistence.createEntityManagerFactory("padroesprojetos");
+        entityManagerFactory = Persistence.createEntityManagerFactory("dangerousanddragons");
     }
 }

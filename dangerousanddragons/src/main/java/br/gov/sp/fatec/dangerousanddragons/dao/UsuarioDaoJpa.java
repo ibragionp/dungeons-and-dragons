@@ -1,5 +1,6 @@
 package br.gov.sp.fatec.dangerousanddragons.dao;
 
+import br.gov.sp.fatec.dangerousanddragons.exception.ExceptionDao;
 import br.gov.sp.fatec.dangerousanddragons.model.Admin;
 import br.gov.sp.fatec.dangerousanddragons.model.PersistenceManager;
 import br.gov.sp.fatec.dangerousanddragons.model.Usuario;
@@ -10,12 +11,15 @@ import javax.persistence.TypedQuery;
 import java.util.List;
 
 public class UsuarioDaoJpa implements UsuarioDao {
-    private EntityManager em;
+
+    private EntityManager entityManager;
+
     public UsuarioDaoJpa(){
         this(PersistenceManager.getInstance().getEntityManager());
     }
-    public UsuarioDaoJpa(EntityManager em){
-        this.em = em;
+
+    public UsuarioDaoJpa(EntityManager entityManager){
+        this.entityManager = entityManager;
     }
 
     @Override
@@ -28,51 +32,59 @@ public class UsuarioDaoJpa implements UsuarioDao {
     }
 
     @Override
-    public Usuario buscarUsuario(String nomeUsuario) {
-        String jpql = "select u from Usuario u where u.nomeUsuario = :nomeUsuario";
-        TypedQuery<Usuario> query = em.createQuery(jpql, Usuario.class);
-        query.setParameter("nomeUsuario", nomeUsuario);
+    public Usuario buscarUsuario(Long idUsuario) {
+        String jpql = "select u from Usuario u where u.id = :id";
+        TypedQuery<Usuario> query = entityManager.createQuery(jpql, Usuario.class);
+        query.setParameter("id", idUsuario);
         return query.getSingleResult();
+    }
+
+    @Override
+    public List<Usuario> buscarUsuarioPorNome(String nomeUsuario) {
+        String jpql = "select u from Usuario u where u.nomeUsuario = :nomeUsuario";
+        TypedQuery<Usuario> query = entityManager.createQuery(jpql, Usuario.class);
+        return query.getResultList();
     }
 
     @Override
     public Usuario commitUsuario(Usuario usuario){
         try{
-            em.getTransaction().begin();
+            entityManager.getTransaction().begin();
             salvarUsuario(usuario);
-            em.getTransaction().commit();
+            entityManager.getTransaction().commit();
             return usuario;
         }
         catch(PersistenceException pe){
             pe.printStackTrace();
-            em.getTransaction().rollback();
-            throw new RuntimeException("Ocorreu um erro ao salvar o usuário: ", pe);
+            entityManager.getTransaction().rollback();
+            throw new ExceptionDao(String.format("Ocorreu um erro ao salvar o usuário: %",
+                    usuario.toString()));
         }
     }
 
     @Override
     public Usuario salvarUsuario(Usuario usuario){
         if(usuario.getId() == null){
-            em.persist(usuario);
+            entityManager.persist(usuario);
         } else {
-            em.merge(usuario);
+            entityManager.merge(usuario);
         }   return usuario;
     }
 
     @Override
-    public void removerUsuario(String nomeUsuario) {
-        Usuario usuario = buscarUsuario(nomeUsuario);
+    public void removerUsuario(Long idUsuario) {
+        Usuario usuario = buscarUsuario(idUsuario);
         if(usuario == null){
-            throw new RuntimeException("O usuário solicitado não foi encontrado.");
+            throw new ExceptionDao("O usuário solicitado para ser removido não foi encontrado.");
         }
-        em.getTransaction().begin();
-        em.remove(usuario);
-        em.getTransaction().commit();
+        entityManager.getTransaction().begin();
+        entityManager.remove(usuario);
+        entityManager.getTransaction().commit();
     }
 
     @Override
-    public String getClearance(String nomeUsuario) {
-        Usuario usuario = buscarUsuario(nomeUsuario);
+    public String getClearance(Long idUsuario) {
+        Usuario usuario = buscarUsuario(idUsuario);
         String clearance = new String();
 
         if(usuario instanceof Admin){
@@ -86,7 +98,7 @@ public class UsuarioDaoJpa implements UsuarioDao {
     @Override
     public List<Usuario> todosUsuario() {
         String jpql = "select u from Usuario u";
-        TypedQuery<Usuario> query = em.createQuery(jpql, Usuario.class);
+        TypedQuery<Usuario> query = entityManager.createQuery(jpql, Usuario.class);
         return query.getResultList();
     }
 }

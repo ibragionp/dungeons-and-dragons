@@ -14,7 +14,7 @@ import javax.persistence.AttributeOverride;
 @Entity
 @Table(name = "PER_PERSONAGEM")
 @Inheritance(strategy = InheritanceType.JOINED)
-@AttributeOverride(name = "id", column = @Column(name = "PER_ID"))
+@AttributeOverride(name = "idPersonagem", column = @Column(name = "PER_ID"))
 public class Personagem extends GeraId {
 
     @ManyToOne(fetch = FetchType.EAGER)

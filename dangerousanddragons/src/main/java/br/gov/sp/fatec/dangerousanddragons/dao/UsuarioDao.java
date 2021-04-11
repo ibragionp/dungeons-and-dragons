@@ -5,17 +5,20 @@ import br.gov.sp.fatec.dangerousanddragons.model.Usuario;
 import java.util.List;
 
 public interface UsuarioDao {
-    public Usuario cadastrarUsuario(String nomeUsuario, String senha, String nomeExibicao);
 
-    public Usuario buscarUsuario(String nomeUsuario);
+    Usuario cadastrarUsuario(String nomeUsuario, String senha, String nomeExibicao);
 
-    public Usuario salvarUsuario(Usuario usuario);
+    Usuario buscarUsuario(Long idUsuario);
 
-    public Usuario commitUsuario(Usuario usuario);
+    List<Usuario> buscarUsuarioPorNome(String nome);
 
-    public void removerUsuario(String nomeUsuario);
+    Usuario salvarUsuario(Usuario usuario);
 
-    public String getClearance(String nomeUsuario);
+    Usuario commitUsuario(Usuario usuario);
 
-    public List<Usuario> todosUsuario();
+    void removerUsuario(Long idUsuario);
+
+    String getClearance(Long idUsuario);
+
+    List<Usuario> todosUsuario();
 }
