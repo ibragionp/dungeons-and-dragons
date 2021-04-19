@@ -1,4 +1,12 @@
 # Maven package Java project Web App to Linux on Azure
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'Avaliação Gratuita (6b3318b2-d8df-4009-9de7-c1cacd4fa9ad)'
+    appType: 'webAppLinux'
+    WebAppName: 'dnd-player-companion'
+    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    RuntimeStack: 'JAVA|8-jre8'
 # Build your Java project and deploy it to Azure as a Linux web app
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/java
