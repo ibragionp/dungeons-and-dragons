@@ -6,8 +6,10 @@ import br.gov.sp.fatec.dangerousanddragons.model.PersistenceManager;
 import br.gov.sp.fatec.dangerousanddragons.model.Usuario;
 
 import javax.persistence.EntityManager;
+import javax.persistence.NoResultException;
 import javax.persistence.PersistenceException;
 import javax.persistence.TypedQuery;
+import java.util.ArrayList;
 import java.util.List;
 
 public class UsuarioDaoJpa implements UsuarioDao {
@@ -25,9 +27,11 @@ public class UsuarioDaoJpa implements UsuarioDao {
     @Override
     public Usuario cadastrarUsuario(String nomeUsuario, String senha, String nomeExibicao) {
         Usuario usuario = new Usuario();
-        usuario.setNomeUsuario(nomeUsuario);
-        usuario.setSenha(senha);
-        usuario.setNomeExibicao(nomeExibicao);
+        if (buscarUsuarioPorNome(nomeUsuario).isEmpty()){
+            usuario.setNomeUsuario(nomeUsuario);
+            usuario.setSenha(senha);
+            usuario.setNomeExibicao(nomeExibicao);
+        }
         return commitUsuario(usuario);
     }
 
@@ -36,14 +40,23 @@ public class UsuarioDaoJpa implements UsuarioDao {
         String jpql = "select u from Usuario u where u.id = :id";
         TypedQuery<Usuario> query = entityManager.createQuery(jpql, Usuario.class);
         query.setParameter("id", idUsuario);
-        return query.getSingleResult();
+        try {
+            return query.getSingleResult();
+        } catch (NoResultException e) {
+            return new Usuario();
+        }
     }
 
     @Override
     public List<Usuario> buscarUsuarioPorNome(String nomeUsuario) {
         String jpql = "select u from Usuario u where u.nomeUsuario = :nomeUsuario";
         TypedQuery<Usuario> query = entityManager.createQuery(jpql, Usuario.class);
-        return query.getResultList();
+        query.setParameter("nomeUsuario", nomeUsuario);
+        try {
+            return query.getResultList();
+        } catch (NoResultException e){
+            return new ArrayList<Usuario>();
+        }
     }
 
     @Override
@@ -57,8 +70,7 @@ public class UsuarioDaoJpa implements UsuarioDao {
         catch(PersistenceException pe){
             pe.printStackTrace();
             entityManager.getTransaction().rollback();
-            throw new ExceptionDao(String.format("Ocorreu um erro ao salvar o usuário: %",
-                    usuario.toString()));
+            throw new RuntimeException("Ocorreu um erro ao salvar o usuário: ", pe);
         }
     }
 

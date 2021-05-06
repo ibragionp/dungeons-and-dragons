@@ -19,7 +19,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 @Table(name = "USU_USUARIO")
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 @DiscriminatorColumn(name = "USU_ADMINISTRADOR", discriminatorType = DiscriminatorType.STRING)
-@AttributeOverride(name = "idUsuario", column = @Column(name = "USU_ID"))
+@AttributeOverride(name = "id", column = @Column(name = "USU_ID"))
 public class Usuario extends GeraId {
 
     @JsonIgnore

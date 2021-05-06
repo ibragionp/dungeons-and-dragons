@@ -1,13 +1,16 @@
 package br.gov.sp.fatec.dangerousanddragons.dao;
 
 import br.gov.sp.fatec.dangerousanddragons.exception.ExceptionDao;
+import br.gov.sp.fatec.dangerousanddragons.model.Grupo;
 import br.gov.sp.fatec.dangerousanddragons.model.PersistenceManager;
 import br.gov.sp.fatec.dangerousanddragons.model.Personagem;
 import br.gov.sp.fatec.dangerousanddragons.model.Usuario;
 
 import javax.persistence.EntityManager;
+import javax.persistence.NoResultException;
 import javax.persistence.PersistenceException;
 import javax.persistence.TypedQuery;
+import java.util.ArrayList;
 import java.util.List;
 
 public class PersonagemDaoJpa implements PersonagemDao {
@@ -37,7 +40,12 @@ public class PersonagemDaoJpa implements PersonagemDao {
     public List<Personagem> buscarPersonagemPorNome(String nomePersonagem) {
         String jpql = "select u from Personagem u where u.nomePersonagem = :nomePersonagem";
         TypedQuery<Personagem> query = entityManager.createQuery(jpql, Personagem.class);
-        return query.getResultList();
+        query.setParameter("nomePersonagem", nomePersonagem);
+        try{
+            return query.getResultList();
+        } catch (NoResultException e) {
+            return new ArrayList<Personagem>();
+        }
     }
 
     @Override
@@ -45,7 +53,11 @@ public class PersonagemDaoJpa implements PersonagemDao {
         String jpql = "select u from Personagem u where u.idPersonagem = :idPersonagem";
         TypedQuery<Personagem> query = entityManager.createQuery(jpql, Personagem.class);
         query.setParameter("idPersonagem", idPersonagem);
-        return query.getSingleResult();
+        try{
+            return query.getSingleResult();
+        }catch(NoResultException e){
+            return new Personagem();
+        }
     }
 
     @Override
@@ -59,8 +71,7 @@ public class PersonagemDaoJpa implements PersonagemDao {
         catch(PersistenceException pe){
             pe.printStackTrace();
             entityManager.getTransaction().rollback();
-            throw new ExceptionDao(String.format("Ocorreu um erro ao salvar o personagem: %s",
-                    personagem.toString()));
+            throw new RuntimeException("Ocorreu um erro ao salvar o personagem: ", pe);
         }
     }
 
