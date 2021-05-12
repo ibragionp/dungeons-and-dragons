@@ -12,8 +12,8 @@
       <p>
         <img class="btn"
         width="400px"
-        src="../assets/btn_grupo.png"
-        @click="$router.push('/about')">
+        src="../assets/btn_criar.png"
+        @click="$router.push('/charcreate')">
       </p>
       <p v-if="getAdmin == true">
         <img class="btn"
