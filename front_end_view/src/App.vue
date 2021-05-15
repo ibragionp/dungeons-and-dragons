@@ -3,7 +3,10 @@
     <div id="nav">
       <router-link v-if="getLogado == false" to="/login">Home</router-link>
       <router-link v-else to="/">Home</router-link> |
-      <router-link to="/about">Sobre</router-link>
+      <router-link to="/about">Sobre</router-link> |
+      <router-link to="/usucreate">Cadastrar Usuário</router-link> |
+      <!--<router-link to="/charcreate">Cadastrar Personagem</router-link> |-->
+      <!--<router-link to="/charcreate">Criar Personagem</router-link>-->
       <a id="logout" 
          v-if="getLogado == true"
          @click="$store.commit('setDeslogado'),
