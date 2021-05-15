@@ -3,6 +3,8 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Login from '../views/Login.vue'
 import Usuario from '../views/Usuario.vue'
+import CharCreate from '../views/Charcreate.vue'
+import UsuCreate from '../views/Usucreate.vue'
 import store from '../store' 
 
 Vue.use(VueRouter)
@@ -44,6 +46,16 @@ Vue.use(VueRouter)
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+  },
+  {
+    path: '/usucreate',
+    name: 'UsuCreate',
+    component:UsuCreate
+  },
+  {
+    path: '/charcreate',
+    name: 'CharCreate',
+    component:CharCreate
   }
 ]
 
