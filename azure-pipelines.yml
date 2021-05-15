@@ -22,7 +22,7 @@ steps:
 #     goals: 'package'
 - task: Maven@3
   inputs:
-    mavenPomFile: 'dungeonsanddragons/pom.xml'
+    mavenPomFile: 'springboot-dungeonsanddragons/pom.xml'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     javaHomeOption: 'JDKVersion'
