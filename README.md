@@ -155,3 +155,36 @@ Assim, não há necessidade de adquirir diversos softwares e integrá-los a dife
 - Administrador pode se cadastrar;
 - Administrador pode ver personagem de todos;
 - Melhorias e Finalizações.
+
+---------------------------
+# - Gerenciamento Macro das Sprints
+Sprint 2
+Período: 03/04/2021 - 18/04/2021
+
+- Desenho de telas no Figma
+- Criação do ambiente do banco de dados e objetos
+- Criação do backend para a ficha de personagem
+- Criação da pipeline de CI\CD
+
+Sprint 3
+Período: 26/04/2021 - 16/05/2021
+
+- Criação do Front-end para a criação de usuário
+- Backend da ficha de personagem (atualização com novos atributos)
+- Frontend da ficha de personagem
+- Alteração dos objetos no banco para incluir os novos atributos
+- Criar visualização pelo frontend para a ficha de personagem
+- Criar teste unitário para a criação de usuário
+- Criar teste unitário para a criação de personagem
+- Documentar as atividades realizadas na Wiki
+
+Sprint 4
+Período: 17/05/2021 - 30/05/2021
+
+- Atualizar backend para os novos atributos de ficha de personagem
+- Atualizar front-end para os novos atributos de ficha de personagem
+- Atualizar o backend para edição da ficha de personagem
+- Atualizar o front-end para edição da ficha de personagem
+- Alterar para que usuário seja um nome único
+- Criar feature de compartilhamento de ficha
+- Alterar o front-end da criação de personagem, para oferecer a opção de gerar os valores dos atributos automaticamente
