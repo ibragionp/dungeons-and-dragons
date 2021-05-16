@@ -140,9 +140,9 @@ O Azure é projetado para ser econômico e oferece flexibilidade para escolher a
 O sistema oferece a possibilidade de aumentar os recursos e depois retroceder conforme a demanda. Em menos de uma hora é possível fazer implementações físicas e lógicas, e ter o ambiente disponível para uso na nuvem.
 Assim, não há necessidade de adquirir diversos softwares e integrá-los a diferentes plataformas, pois o  Azure agrupa todos os serviços em um único datacenter.
 
-[Informações relacionadas a como foi implementado o Back-end](/Dungeons-And-Dragons-Player-Companion/Back%2Dend)
+[Back-end](/Dungeons-And-Dragons-Player-Companion/Back%2Dend)
 
-[Informações relacionadas a como foram implementadas as Pipelines de CI-CD](/Dungeons-And-Dragons-Player-Companion/Pipelines-de-CI%2DCD)
+[Pipelines de CI-CD](/Dungeons-And-Dragons-Player-Companion/Pipelines-de-CI%2DCD)
 
 ---------------------------
 # - Requisitos:
