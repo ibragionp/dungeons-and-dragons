@@ -142,7 +142,7 @@ Assim, não há necessidade de adquirir diversos softwares e integrá-los a dife
 
 [Back-end](/Dungeons-And-Dragons-Player-Companion/Back%2Dend)
 
-[Pipelines de CI-CD](/Dungeons-And-Dragons-Player-Companion/Pipelines-de-CI%2DCD)
+[Pipelines de CI-CD](https://dev.azure.com/DevOpsFatec5Sem2021/Dungeons%20and%20Dragons%20Player%20Companion/_wiki/wikis/Dungeons-and-Dragons-Player-Companion.wiki/3/Pipelines-de-CI-CD)
 
 ---------------------------
 # - Requisitos:
