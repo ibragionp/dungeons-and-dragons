@@ -11,7 +11,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import com.fatec.springbootdungeonsanddragons.entity.Usuario;
 import com.fatec.springbootdungeonsanddragons.entity.Personagem;
-import com.fatec.springbootdungeonsanddragons.repository.ClasseRepository;
 import com.fatec.springbootdungeonsanddragons.repository.UsuarioRepository;
 
 @SpringBootTest
