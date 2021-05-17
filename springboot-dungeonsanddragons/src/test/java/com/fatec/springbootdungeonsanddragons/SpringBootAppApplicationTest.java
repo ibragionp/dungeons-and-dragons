@@ -28,8 +28,5 @@ class SpringBootAppApplicationTests {
         usuario.setNomeUsuario("usuario_teste");
         usuario.setSenha("senha");
         usuario.setNomeExibicao("teste");
-
-        usuarioRepo.save(usuario);
-        assertNotNull(usuario.getId());
     }
 }
