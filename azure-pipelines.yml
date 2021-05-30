@@ -58,5 +58,5 @@ steps:
   displayName: Instalar dependências do Front
 
 - script:
-    npm run serve
+    npm run serve --prefix front_end_view
   displayName: Rodar Servidor do Front
