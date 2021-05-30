@@ -50,3 +50,8 @@ steps:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)/ArtifactsToBePublished'
     ArtifactName: 'drop'
     publishLocation: 'Container'
+
+- task: Npm@1
+  inputs:
+    command: 'install'
+    workingDir: '/front_end_view'
