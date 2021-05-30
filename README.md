@@ -187,10 +187,10 @@ Período: 26/04/2021 - 16/05/2021
 Sprint 4
 Período: 17/05/2021 - 30/05/2021
 
-- Atualizar backend para os novos atributos de ficha de personagem
-- Atualizar front-end para os novos atributos de ficha de personagem
-- Atualizar o backend para edição da ficha de personagem
-- Atualizar o front-end para edição da ficha de personagem
-- Alterar para que usuário seja um nome único
-- Criar feature de compartilhamento de ficha
-- Alterar o front-end da criação de personagem, para oferecer a opção de gerar os valores dos atributos automaticamente
+- Conectar o front-end ao back-end
+- Documentar os processos devops
+- Documentar o porque do uso da cloud Azure no projeto
+- Documentar como o Teams auxilia na execução do projeto
+- Documentar o uso da ferramenta NPM no front-end
+- Documentar o uso do maven no processo de desenvolvimento
+- Documentar o uso do Swagger no processo de desenvolvimento
