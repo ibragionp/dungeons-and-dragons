@@ -54,4 +54,4 @@ steps:
 - task: Npm@1
   inputs:
     command: 'install'
-    workingDir: '/front_end_view'
+    workingDir: '../front_end_view'
