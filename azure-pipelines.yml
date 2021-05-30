@@ -56,7 +56,3 @@ steps:
     command: 'install'
     workingDir: 'front_end_view'
   displayName: Instalar dependências do Front
-
-- script:
-    npm run serve --prefix front_end_view
-  displayName: Rodar Servidor do Front
