@@ -64,6 +64,38 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			<!--Liquibase maven plugin BEGIN-->
+			<plugin>
+			<groupId>org.liquibase</groupId>
+			<artifactId>liquibase-maven-plugin</artifactId>
+			<version>3.1.0</version>
+			<configuration>
+				<changeLogFile>src/main/resources/db-scripts/db.changelog.xml</changeLogFile>
+				<driver>com.mysql.jdbc.Driver</driver>
+			</configuration>
+			<executions>
+				<execution>
+					<id>liquibase-install</id>
+					<phase>install</phase>
+					<goals>
+						<goal>update</goal>
+					</goals>
+					<configuration>
+						<url>jdbc:mysql://mysql.devmedia.com.br/artigo</url>
+							<username>root</username>
+							<password></password>
+					</configuration>
+				</execution>
+			</executions>
+			<dependencies>
+				<dependency>
+					<groupId>mysql</groupId>
+					<artifactId>mysql-connector-java</artifactId>
+					<version>5.0.4</version>
+				</dependency>
+			</dependencies>
+			</plugin>
+			<!--Liquibase maven plugin END-->
 		</plugins>
 	</build>
 
