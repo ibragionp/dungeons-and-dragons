@@ -20,16 +20,14 @@ steps:
 #     publishJUnitResults: true
 #     testResultsFiles: '**/surefire-reports/TEST-*.xml'
 #     goals: 'package'
-- task: AzureMysqlDeployment@1
+- task: MysqlDeploymentOnMachineGroup@1
   inputs:
-    azureSubscription: 'Avaliação Gratuita (6b3318b2-d8df-4009-9de7-c1cacd4fa9ad)'
+    TaskNameSelector: 'SqlTaskFile'
+    SqlFile: 'springboot-dungeonsanddragons/'
     ServerName: 'localhost'
     DatabaseName: 'DUNGEONS_AND_DRAGONS'
-    SqlUsername: 'USER''@''LOCALHOST'
+    SqlUsername: 'USER@LOCALHOST'
     SqlPassword: 'DD123'
-    TaskNameSelector: 'SqlTaskFile'
-    SqlFile: 'springboot-dungeonsanddragons/up.sql'
-    IpDetectionMethod: 'AutoDetect'
 
 - task: Maven@3
   inputs:
