@@ -117,21 +117,34 @@ class SpringBootAppApplicationTests {
 
         assertNotNull(usuario.getId());
 
-        // Personagem personagem = new Personagem();        
-        // personagem.setProprietario(usuario);
-        // personagem.setNome("Shang Tsung");
-        // personagem.setRaca("Chinês");
-        // personagem.setClasse("Feiticeiro");
-        // personagem.setNivel(1);
-        // personagem.setAntecedente("John Tobias");
-        // personagem.setForca(2);
-        // personagem.setDestreza(3);
-        // personagem.setConstituicao(4);
-        // personagem.setInteligencia(5);
-        // personagem.setSabedoria(6);
-        // personagem.setCarisma(7);
+        // Long id = (long)1;
+        String nome = "Shang Tsung", 
+               raca = "Chinês", 
+               classe = "Feiticeiro", 
+               antecedente = "John Tobias";
+        Integer nivel = 1, 
+                forca = 2, 
+                destreza = 3, 
+                constituicao = 4, 
+                inteligencia = 5, 
+                sabedoria = 6, 
+                carisma = 7;
 
-        // personagemRepo.save(personagem);
+        Personagem personagem = new Personagem();        
+        personagem.setProprietario(usuario);
+        personagem.setNome(nome);
+        personagem.setRaca(raca);
+        personagem.setClasse(classe);
+        personagem.setNivel(nivel);
+        personagem.setAntecedente(antecedente);
+        personagem.setForca(forca);
+        personagem.setDestreza(destreza);
+        personagem.setConstituicao(constituicao);
+        personagem.setInteligencia(inteligencia);
+        personagem.setSabedoria(sabedoria);
+        personagem.setCarisma(carisma);
+
+        personagemRepo.save(personagem);
         // assertNotNull(personagem.getId());
     }
     
