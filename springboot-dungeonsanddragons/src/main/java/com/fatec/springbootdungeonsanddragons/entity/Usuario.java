@@ -6,7 +6,6 @@ import javax.persistence.*;
 import java.util.UUID;
 
 @Entity
-@DiscriminatorColumn("null")
 @Table(name = "USU_USUARIO")
 public class Usuario {
 

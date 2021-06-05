@@ -11,7 +11,7 @@ import java.util.UUID;
 public class Personagem {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "PER_ID_UNIQUE")
     private Long id;
 

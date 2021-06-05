@@ -11,7 +11,7 @@ import java.util.UUID;
 public class Grupo {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "GRU_ID_UNIQUE")
     private Long id;
 
