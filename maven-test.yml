@@ -9,6 +9,11 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
+spring:
+  jpa:
+    hibernate:
+      use-new-id-generator-mappings: false
+
 steps:
 - task: Maven@3
   inputs:
