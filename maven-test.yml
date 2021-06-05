@@ -20,7 +20,7 @@ steps:
     SqlFile: 'springboot-dungeonsanddragons/'
     ServerName: 'localhost'
     DatabaseName: 'DUNGEONS_AND_DRAGONS'
-    SqlUsername: 'USER@LOCALHOST'
+    SqlUsername: 'USER'
     SqlPassword: 'DD123'
 
 - task: Maven@3
