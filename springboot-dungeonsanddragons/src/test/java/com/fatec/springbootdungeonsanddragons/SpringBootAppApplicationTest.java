@@ -17,6 +17,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.fatec.springbootdungeonsanddragons.repository.FeiticeiroRepository;
 import com.fatec.springbootdungeonsanddragons.repository.LutadorRepository;
+import com.fatec.springbootdungeonsanddragons.repository.PersonagemRepository;
 import com.fatec.springbootdungeonsanddragons.repository.UsuarioRepository;
 import com.fatec.springbootdungeonsanddragons.service.UsuarioService;
 
@@ -28,6 +29,9 @@ class SpringBootAppApplicationTests {
     @Autowired
     private UsuarioRepository usuarioRepo;
     
+    @Autowired
+    private PersonagemRepository personagemRepo;
+
     @Autowired
     private FeiticeiroRepository feiticeiroRepo;
 
@@ -58,35 +62,75 @@ class SpringBootAppApplicationTests {
         usuario.setNomeUsuario("Povs");
         usuario.setSenha("senha");
         usuario.setNomeExibicao("teste");
-
         usuarioRepo.save(usuario);
+
         List<Usuario> usuarios = usuarioRepo.findByNomeUsuario("Povs");
         System.out.print(usuarios);
         assertTrue(!usuarios.isEmpty());
     }
 
-    // Testes de inserir Feiticeiro
-    @Test
-    void testaInsercaoFeiticeiro() {
-        Feiticeiro feiticeiro = new Feiticeiro();
-        
-        // feiticeiro.setProprietario(usuario);
-        // feiticeiro.setNome("Shang Tsung");
-        // feiticeiro.setRaca("Chinês");
-        // feiticeiro.setClasse("Feiticeiro");
-        // feiticeiro.setNivel(1);
-        // feiticeiro.setAntecedente("John Tobias");
-        // feiticeiro.setForca(2);
-        // feiticeiro.setDestreza(3);
-        // feiticeiro.setConstituicao(4);
-        // feiticeiro.setInteligencia(5);
-        // feiticeiro.setSabedoria(6);
-        // feiticeiro.setCarisma(7);
-        feiticeiro.setMagiasConhecidas(8);
-        feiticeiro.setModificadorHabilidade(9);
+    // // Testes de inserir Feiticeiro
+    // @Test
+    // void testaInsercaoFeiticeiro() {
 
-        feiticeiroRepo.save(feiticeiro);
-        assertNotNull(feiticeiro.getId());
+    //     Usuario usuario = new Usuario();
+    //     usuario.setNomeUsuario("Povs");
+    //     usuario.setSenha("senha");
+    //     usuario.setNomeExibicao("teste");
+    //     usuarioRepo.save(usuario);
+
+    //     Personagem personagem = new Personagem();        
+    //     personagem.setProprietario(usuario);
+    //     personagem.setNome("Shang Tsung");
+    //     personagem.setRaca("Chinês");
+    //     personagem.setClasse("Feiticeiro");
+    //     personagem.setNivel(1);
+    //     personagem.setAntecedente("John Tobias");
+    //     personagem.setForca(2);
+    //     personagem.setDestreza(3);
+    //     personagem.setConstituicao(4);
+    //     personagem.setInteligencia(5);
+    //     personagem.setSabedoria(6);
+    //     personagem.setCarisma(7);
+
+    //     personagemRepo.save(personagem);
+
+    //     Feiticeiro feiticeiro = new Feiticeiro();
+        
+    //     feiticeiro.setMagiasConhecidas(8);
+    //     feiticeiro.setModificadorHabilidade(9);
+
+    //     feiticeiroRepo.save(feiticeiro);
+    //     assertNotNull(feiticeiro.getId());
+    // }
+
+    
+    // Testes de inserir Personagem
+    @Test
+    void testaInsercaoPersonagem() {
+
+        Usuario usuario = new Usuario();
+        usuario.setNomeUsuario("Povs");
+        usuario.setSenha("senha");
+        usuario.setNomeExibicao("teste");
+        usuarioRepo.save(usuario);
+
+        Personagem personagem = new Personagem();        
+        personagem.setProprietario(usuario);
+        personagem.setNome("Shang Tsung");
+        personagem.setRaca("Chinês");
+        personagem.setClasse("Feiticeiro");
+        personagem.setNivel(1);
+        personagem.setAntecedente("John Tobias");
+        personagem.setForca(2);
+        personagem.setDestreza(3);
+        personagem.setConstituicao(4);
+        personagem.setInteligencia(5);
+        personagem.setSabedoria(6);
+        personagem.setCarisma(7);
+
+        personagemRepo.save(personagem);
+        assertNotNull(personagem.getId());
     }
     
 }
