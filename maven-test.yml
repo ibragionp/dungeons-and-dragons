@@ -56,3 +56,8 @@ steps:
     command: 'install'
     workingDir: 'front_end_view'
   displayName: Instalar dependências do Front
+
+- script: |
+    echo Iniciando Maven Test
+    mvn clean test
+  displayName: 'Maven Test'
