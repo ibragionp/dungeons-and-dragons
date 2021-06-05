@@ -14,10 +14,21 @@ steps:
   inputs:
     script: 'sudo service mysql start'
 
+- task: AzureMysqlDeployment@1
+  inputs:
+    azureSubscription: 'Avaliação Gratuita (6b3318b2-d8df-4009-9de7-c1cacd4fa9ad)'
+    ServerName: 'jdbc:mysql://localhost:3306/DUNGEONS_AND_DRAGONS'
+    DatabaseName: 'DUNGEONS_AND_DRAGONS'
+    SqlUsername: 'USER'
+    SqlPassword: 'DD123'
+    TaskNameSelector: 'SqlTaskFile'
+    SqlFile: 'springboot-dungeonsanddragons/up.sql'
+    IpDetectionMethod: 'AutoDetect'
+
 - task: MysqlDeploymentOnMachineGroup@1
   inputs:
     TaskNameSelector: 'SqlTaskFile'
-    SqlFile: 'springboot-dungeonsanddragons/'
+    SqlFile: 'springboot-dungeonsanddragons/up.sql'
     ServerName: 'localhost'
     DatabaseName: 'DUNGEONS_AND_DRAGONS'
     SqlUsername: 'USER'
