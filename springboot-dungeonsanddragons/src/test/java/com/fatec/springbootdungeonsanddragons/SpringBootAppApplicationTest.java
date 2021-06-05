@@ -71,17 +71,17 @@ class SpringBootAppApplicationTests {
         Feiticeiro feiticeiro = new Feiticeiro();
         
         // feiticeiro.setProprietario(usuario);
-        feiticeiro.setNome("Shang Tsung");
-        feiticeiro.setRaca("Chinês");
-        feiticeiro.setClasse("Feiticeiro");
-        feiticeiro.setNivel(1);
-        feiticeiro.setAntecedente("John Tobias");
-        feiticeiro.setForca(2);
-        feiticeiro.setDestreza(3);
-        feiticeiro.setConstituicao(4);
-        feiticeiro.setInteligencia(5);
-        feiticeiro.setSabedoria(6);
-        feiticeiro.setCarisma(7);
+        // feiticeiro.setNome("Shang Tsung");
+        // feiticeiro.setRaca("Chinês");
+        // feiticeiro.setClasse("Feiticeiro");
+        // feiticeiro.setNivel(1);
+        // feiticeiro.setAntecedente("John Tobias");
+        // feiticeiro.setForca(2);
+        // feiticeiro.setDestreza(3);
+        // feiticeiro.setConstituicao(4);
+        // feiticeiro.setInteligencia(5);
+        // feiticeiro.setSabedoria(6);
+        // feiticeiro.setCarisma(7);
         feiticeiro.setMagiasConhecidas(8);
         feiticeiro.setModificadorHabilidade(9);
 
