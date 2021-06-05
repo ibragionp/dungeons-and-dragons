@@ -9,12 +9,12 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
-steps:
 spring:
   jpa:
     hibernate:
       use-new-id-generator-mappings: false
 
+steps:
 - task: Maven@3
   inputs:
     mavenPomFile: 'springboot-dungeonsanddragons/pom.xml'
