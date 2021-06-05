@@ -24,12 +24,12 @@ public class FeiticeiroController {
         return feiticeiroService.listarFeiticeiros();
     }
 
-    @GetMapping("/feiticeiro/{id}")
+    @GetMapping("/byId/{id}")
     public RequestResult findFeiticeiroById(@PathVariable Long id){
         return feiticeiroService.buscarFeiticeiroPorId(id);
     }
 
-    @GetMapping("/feiticeiros/{name}")
+    @GetMapping("/byName/{name}")
     public RequestResult findFeiticeiroByName(@PathVariable String nome){
         return feiticeiroService.buscarFeiticeiroPorNome(nome);
     }

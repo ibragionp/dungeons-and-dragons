@@ -49,6 +49,14 @@ public class Grupo {
         this.grupoId = grupoId;
     }
 
+    public Usuario getMestre() {
+        return mestre;
+    }
+
+    public void setMestre(Usuario mestre) {
+        this.mestre = mestre;
+    }
+
     public String getNomeGrupo() {
         return nomeGrupo;
     }
