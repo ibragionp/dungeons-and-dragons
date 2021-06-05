@@ -4,8 +4,6 @@ import com.fatec.springbootdungeonsanddragons.entity.Usuario;
 import com.fatec.springbootdungeonsanddragons.utils.RequestResult;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-
 
 public interface UsuarioService {
     public RequestResult cadastrarUsuario(Usuario usuario);
