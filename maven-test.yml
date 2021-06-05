@@ -10,19 +10,6 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- task: CmdLine@2
-  inputs:
-    script: 'sudo service mysql start'
-
-- task: MysqlDeploymentOnMachineGroup@1
-  inputs:
-    TaskNameSelector: 'SqlTaskFile'
-    SqlFile: 'springboot-dungeonsanddragons/up.sql'
-    ServerName: 'localhost'
-    DatabaseName: 'DUNGEONS_AND_DRAGONS'
-    SqlUsername: 'USER'
-    SqlPassword: 'DD123'
-
 - task: Maven@3
   inputs:
     mavenPomFile: 'springboot-dungeonsanddragons/pom.xml'
