@@ -6,6 +6,8 @@ import javax.persistence.*;
 import java.util.UUID;
 
 @Entity
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name = "USU_ADMINISTRADOR", discriminatorType = DiscriminatorType.STRING)
 @Table(name = "USU_USUARIO")
 public class Usuario {
 
