@@ -7,6 +7,8 @@ import javax.persistence.criteria.CriteriaBuilder;
 import java.util.UUID;
 
 @Entity
+@Inheritance(strategy = InheritanceType.JOINED)
+@AttributeOverride(name = "id", column = @Column(name = "PER_ID"))
 @Table(name = "PER_PERSONAGEM")
 public class Personagem {
 
