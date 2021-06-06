@@ -105,47 +105,47 @@ class SpringBootAppApplicationTests {
     // }
 
     
-    // Testes de inserir Personagem
-    @Test
-    void testaInsercaoPersonagem() {
+    // // Testes de inserir Personagem
+    // @Test
+    // void testaInsercaoPersonagem() {
 
-        Usuario usuario = new Usuario();
-        usuario.setNomeUsuario("Povs");
-        usuario.setSenha("senha");
-        usuario.setNomeExibicao("teste");
-        usuarioRepo.save(usuario);
+    //     Usuario usuario = new Usuario();
+    //     usuario.setNomeUsuario("Povs");
+    //     usuario.setSenha("senha");
+    //     usuario.setNomeExibicao("teste");
+    //     usuarioRepo.save(usuario);
 
-        assertNotNull(usuario.getId());
+    //     assertNotNull(usuario.getId());
 
-        // Long id = (long)1;
-        String nome = "Shang Tsung", 
-               raca = "Chinês", 
-               classe = "Feiticeiro", 
-               antecedente = "John Tobias";
-        Integer nivel = 1, 
-                forca = 2, 
-                destreza = 3, 
-                constituicao = 4, 
-                inteligencia = 5, 
-                sabedoria = 6, 
-                carisma = 7;
+    //     // Long id = (long)1;
+    //     String nome = "Shang Tsung", 
+    //            raca = "Chinês", 
+    //            classe = "Feiticeiro", 
+    //            antecedente = "John Tobias";
+    //     Integer nivel = 1, 
+    //             forca = 2, 
+    //             destreza = 3, 
+    //             constituicao = 4, 
+    //             inteligencia = 5, 
+    //             sabedoria = 6, 
+    //             carisma = 7;
 
-        Personagem personagem = new Personagem();        
-        personagem.setProprietario(usuario);
-        personagem.setNome(nome);
-        personagem.setRaca(raca);
-        personagem.setClasse(classe);
-        personagem.setNivel(nivel);
-        personagem.setAntecedente(antecedente);
-        personagem.setForca(forca);
-        personagem.setDestreza(destreza);
-        personagem.setConstituicao(constituicao);
-        personagem.setInteligencia(inteligencia);
-        personagem.setSabedoria(sabedoria);
-        personagem.setCarisma(carisma);
+    //     Personagem personagem = new Personagem();        
+    //     personagem.setProprietario(usuario);
+    //     personagem.setNome(nome);
+    //     personagem.setRaca(raca);
+    //     personagem.setClasse(classe);
+    //     personagem.setNivel(nivel);
+    //     personagem.setAntecedente(antecedente);
+    //     personagem.setForca(forca);
+    //     personagem.setDestreza(destreza);
+    //     personagem.setConstituicao(constituicao);
+    //     personagem.setInteligencia(inteligencia);
+    //     personagem.setSabedoria(sabedoria);
+    //     personagem.setCarisma(carisma);
 
-        personagemRepo.save(personagem);
-        // assertNotNull(personagem.getId());
-    }
+    //     personagemRepo.save(personagem);
+    //     // assertNotNull(personagem.getId());
+    // }
     
 }
