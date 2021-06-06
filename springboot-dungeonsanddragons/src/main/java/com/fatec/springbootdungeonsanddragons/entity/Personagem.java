@@ -8,7 +8,7 @@ import java.util.UUID;
 
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
-@AttributeOverride(name = "id", column = @Column(name = "PER_ID"))
+@AttributeOverride(name = "id", column = @Column(name = "PER_ID_UNIQUE"))
 @Table(name = "PER_PERSONAGEM")
 public class Personagem {
 
