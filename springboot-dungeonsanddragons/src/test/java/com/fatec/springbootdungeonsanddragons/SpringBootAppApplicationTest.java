@@ -147,5 +147,24 @@ class SpringBootAppApplicationTests {
     //     personagemRepo.save(personagem);
     //     // assertNotNull(personagem.getId());
     // }
+
+    // TESTES DE DELETAR USUARIO
+    @Test
+    void testaExcluir() {
+        Usuario usuario = new Usuario();
+        usuario.setNomeUsuario("Povs");
+        usuario.setSenha("senha");
+        usuario.setNomeExibicao("teste");
+        usuarioRepo.save(usuario);
+        assertNotNull(usuario.getId());
+
+        Usuario usuarioFindById = usuarioRepo.findById((long)usuario.getId());
+        System.out.print(usuarioFindById);
+        assertTrue(usuarioFindById != null);
+        
+        usuarioRepo.deleteById(usuarioFindById.getId());
+        Usuario usuarioDelete = usuarioRepo.findById((long)usuario.getId());
+        assertFalse(usuarioDelete != null);
+    }
     
 }
