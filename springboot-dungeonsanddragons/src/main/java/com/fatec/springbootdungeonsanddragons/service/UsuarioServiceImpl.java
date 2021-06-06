@@ -52,6 +52,7 @@ public class UsuarioServiceImpl implements UsuarioService{
             usuarioExistente.setNomeUsuario(nomeUsuario);
             usuarioExistente.setSenha(senha);
             usuarioExistente.setNomeExibicao(nomeExibicao);
+            usuarioRepository.save(usuarioExistente);
             return new RequestResult().success();
         }
         return new RequestResult().error("Usuário não encontrado.");

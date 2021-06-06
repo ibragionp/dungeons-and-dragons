@@ -7,11 +7,15 @@ import javax.persistence.criteria.CriteriaBuilder;
 import java.util.UUID;
 
 @Entity
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+// @AttributeOverride(name = "id", column = @Column(name = "PER_ID_UNIQUE"))
+// @DiscriminatorColumn(name = "PER_PERSONA", discriminatorType = DiscriminatorType.STRING)
+// @DiscriminatorColumn(name = "PER_LUTADOR", discriminatorType = DiscriminatorType.STRING)
 @Table(name = "PER_PERSONAGEM")
 public class Personagem {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "PER_ID_UNIQUE")
     private Long id;
 

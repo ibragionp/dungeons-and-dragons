@@ -1,16 +1,15 @@
 package com.fatec.springbootdungeonsanddragons.entity;
-
-import org.hibernate.annotations.Type;
-
-import javax.persistence.*;
 import java.util.UUID;
-
+import org.hibernate.annotations.Type;
+import javax.persistence.*;
 @Entity
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name = "USU_ADMINISTRADOR", discriminatorType = DiscriminatorType.STRING)
 @Table(name = "USU_USUARIO")
 public class Usuario {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "USU_ID")
     private Long id;
 
