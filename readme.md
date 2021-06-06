@@ -27,7 +27,7 @@ Ao entrar no site, o usuário poderá se cadastrar, ou conectar-se com um usuár
 [Pipelines de CI-CD](https://dev.azure.com/DevOpsFatec5Sem2021/Dungeons%20and%20Dragons%20Player%20Companion/_wiki/wikis/Dungeons-and-Dragons-Player-Companion.wiki/3/Pipelines-de-CI-CD)
 
 ---------------------------
-# - Requisitos:
+# - Requisitos: 
 
 - Modelagem do banco de dados
 - Criação do banco de dados no MySQL
