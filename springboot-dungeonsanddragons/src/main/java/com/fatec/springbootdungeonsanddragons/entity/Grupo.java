@@ -11,7 +11,7 @@ import java.util.UUID;
 public class Grupo {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "GRU_ID_UNIQUE")
     private Long id;
 
@@ -47,6 +47,14 @@ public class Grupo {
 
     public void setGrupoId(Long grupoId) {
         this.grupoId = grupoId;
+    }
+
+    public Usuario getMestre() {
+        return mestre;
+    }
+
+    public void setMestre(Usuario mestre) {
+        this.mestre = mestre;
     }
 
     public String getNomeGrupo() {

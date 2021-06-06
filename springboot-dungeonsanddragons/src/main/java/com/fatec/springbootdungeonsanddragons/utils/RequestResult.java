@@ -22,6 +22,14 @@ public class RequestResult<T> {
         return reqRes;
     }
 
+    public RequestResult error(String errorMessage) {
+        RequestResult reqRes = new RequestResult();
+        reqRes.setHasErrors(true);
+        reqRes.setErrorMessage(errorMessage);
+        reqRes.setStatusCode(0);
+        return reqRes;
+    }
+
     public int getStatusCode() {
         return statusCode;
     }
@@ -62,11 +70,5 @@ public class RequestResult<T> {
         this.hasData = hasData;
     }
 
-    public RequestResult error(String errorMessage) {
-        RequestResult reqRes = new RequestResult();
-        reqRes.setHasErrors(true);
-        reqRes.setErrorMessage(errorMessage);
-        reqRes.setStatusCode(0);
-        return reqRes;
-    }
+
 }
