@@ -9,6 +9,7 @@ import java.util.UUID;
 @Entity
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 // @AttributeOverride(name = "id", column = @Column(name = "PER_ID_UNIQUE"))
+@DiscriminatorColumn(name = "PER_TIPO", discriminatorType = DiscriminatorType.STRING)
 @Table(name = "PER_PERSONAGEM")
 public class Personagem {
 
