@@ -14,9 +14,15 @@ Ao entrar no site, o usuário poderá se cadastrar, ou conectar-se com um usuár
 
 #### Links relacionados a documentação do projeto
 
+[Mais informações sobre o projeto](https://dev.azure.com/DevOpsFatec5Sem2021/Dungeons%20and%20Dragons%20Player%20Companion/_wiki/wikis/Dungeons-and-Dragons-Player-Companion.wiki/72/D-D-Website)
+
 [Back-end](https://dev.azure.com/DevOpsFatec5Sem2021/Dungeons%20and%20Dragons%20Player%20Companion/_wiki/wikis/Dungeons-and-Dragons-Player-Companion.wiki/4/Back-end)
 
 [Fron-end](https://dev.azure.com/DevOpsFatec5Sem2021/Dungeons%20and%20Dragons%20Player%20Companion/_wiki/wikis/Dungeons-and-Dragons-Player-Companion.wiki/5/Front-End)
+
+[Devops](https://dev.azure.com/DevOpsFatec5Sem2021/Dungeons%20and%20Dragons%20Player%20Companion/_wiki/wikis/Dungeons-and-Dragons-Player-Companion.wiki/13/Devops)
+
+[Ferramentas DevOps](https://dev.azure.com/DevOpsFatec5Sem2021/Dungeons%20and%20Dragons%20Player%20Companion/_wiki/wikis/Dungeons-and-Dragons-Player-Companion.wiki/10/Ferramentas-DevOps)
 
 [Pipelines de CI-CD](https://dev.azure.com/DevOpsFatec5Sem2021/Dungeons%20and%20Dragons%20Player%20Companion/_wiki/wikis/Dungeons-and-Dragons-Player-Companion.wiki/3/Pipelines-de-CI-CD)
 
