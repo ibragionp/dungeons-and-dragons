@@ -9,7 +9,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "FEI_FEITICEIRO")
 @PrimaryKeyJoinColumn(name = "FEI_ID")
-@DiscriminatorValue("Feiticeiro")
+@DiscriminatorValue("Persona")
 public class Feiticeiro extends Personagem {
 
     @Column(name = "FEI_MAGIAS_CONHECIDAS")
