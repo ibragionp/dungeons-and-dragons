@@ -150,11 +150,11 @@ class SpringBootAppApplicationTests {
 
     // TESTES DE DELETAR USUARIO
     @Test
-    void testaExcluir() {
+    void testaExclusao() {
         Usuario usuario = new Usuario();
-        usuario.setNomeUsuario("Povs");
-        usuario.setSenha("senha");
-        usuario.setNomeExibicao("teste");
+        usuario.setNomeUsuario("Tales");
+        usuario.setSenha("123");
+        usuario.setNomeExibicao("Oliveira");
         usuarioRepo.save(usuario);
         assertNotNull(usuario.getId());
 
@@ -166,5 +166,37 @@ class SpringBootAppApplicationTests {
         Usuario usuarioDelete = usuarioRepo.findById((long)usuario.getId());
         assertFalse(usuarioDelete != null);
     }
-    
+
+    // TESTES DE EDITAR USUARIO
+    @Test
+    void testaEdicao() {
+        Usuario usuario = new Usuario();
+        usuario.setNomeUsuario("Tales");
+        usuario.setSenha("123");
+        usuario.setNomeExibicao("Oliveira");
+        usuarioRepo.save(usuario);
+        assertNotNull(usuario.getId());
+
+        Usuario usuarioFindById = usuarioRepo.findById((long)usuario.getId());
+        System.out.print(usuarioFindById);
+        assertTrue(usuarioFindById != null);
+        
+        usuarioFindById.setNomeUsuario("SelaT");
+        usuarioFindById.setSenha("321");
+        usuarioFindById.setNomeExibicao("Arievilo");
+        usuarioRepo.save(usuarioFindById);
+        assertNotNull(usuarioFindById.getId());
+
+        Usuario usuarioAlterado = usuarioRepo.findById((long)usuarioFindById.getId());
+        System.out.print(usuarioAlterado);
+        assertTrue(usuarioAlterado != null);
+
+        assertFalse(usuarioAlterado.getNomeUsuario() == "Tales");
+        assertTrue(usuarioAlterado.getNomeUsuario() == "SelaT");
+        assertFalse(usuarioAlterado.getSenha() == "123");
+        assertTrue(usuarioAlterado.getSenha() == "321");
+        assertFalse(usuarioAlterado.getNomeExibicao() == "Oliveira");
+        assertTrue(usuarioAlterado.getNomeExibicao() == "Arievilo");
+        
+    }
 }
