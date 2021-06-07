@@ -61,6 +61,11 @@
 			<artifactId>springfox-swagger-ui</artifactId>
 			<version>2.9.2</version>
 		</dependency>
+		<!-- Liquibase -->
+		<dependency>
+		<groupId>org.liquibase</groupId>
+			<artifactId>liquibase-core</artifactId>
+		</dependency> 
 	</dependencies>
 
 	<build>
@@ -68,6 +73,40 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<!-- User liquibase plugin -->
+			<plugin>
+			<groupId>org.liquibase</groupId>
+			<artifactId>liquibase-maven-plugin</artifactId>
+			<version>3.0.5</version>
+			<configuration>
+				<propertyFile>src/main/resources/liquibase.properties</propertyFile>
+			</configuration>
+			<!--
+			<executions>
+				<execution>
+					<goals>
+					<goal>update</goal>
+				</goals>
+				</execution>
+				</executions>
+			-->
+			</plugin>
+			<plugin>
+			<artifactId>maven-assembly-plugin</artifactId>
+			<version>2.5.3</version>
+			<configuration>
+				<descriptor>src/assembly/assembly.xml</descriptor>
+				<appendAssemblyId>false</appendAssemblyId>
+			</configuration>
+			<executions>
+				<execution>
+				<phase>package</phase>
+				<goals>
+					<goal>single</goal>
+				</goals>
+				</execution>
+			</executions>
 			</plugin>
 		</plugins>
 	</build>
