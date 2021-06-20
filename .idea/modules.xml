@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Dungeons%20and%20Dragons%20Player%20Companion.iml" filepath="$PROJECT_DIR$/.idea/Dungeons%20and%20Dragons%20Player%20Companion.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-dungeonsanddragons/springboot-dungeonsanddragons.iml" filepath="$PROJECT_DIR$/springboot-dungeonsanddragons/springboot-dungeonsanddragons.iml" />
     </modules>
   </component>
 </project>
