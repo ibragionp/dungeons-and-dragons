@@ -31,7 +31,8 @@ steps:
     mavenVersionOption: 'Default'
     mavenAuthenticateFeed: false
     effectivePomSkip: false
-    sonarQubeRunAnalysis: false
+    sonarQubeRunAnalysis: true
+    sqMavenPluginVersionChoice: 'latest'
 
 - task: ArchiveFiles@2
   inputs:
@@ -53,7 +54,7 @@ steps:
     ArtifactName: 'drop'
     publishLocation: 'Container'
 
-- task: SonarCloudAnalyze@1
+#- task: SonarCloudAnalyze@1
 
 - task: SonarCloudPublish@1
   inputs:
