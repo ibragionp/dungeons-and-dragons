@@ -14,8 +14,11 @@ steps:
   inputs:
     SonarCloud: 'SonarCloud'
     organization: 'devopsfatec5sem2021'
-    scannerMode: 'MSBuild'
+    scannerMode: 'Other'
     extraProperties: |
+      # Additional properties that will be passed to the scanner,
+      # Put one key=value per line, example:
+      # sonar.exclusions=**/*.bin
       sonar.projectKey=DevOpsFatec5Sem2021_Dungeons-and-Dragons-Player-Companion
       sonar.projectName=Dungeons and Dragons Player Companion
 
