@@ -26,48 +26,48 @@ import com.fatec.springbootdungeonsanddragons.service.UsuarioService;
 @Rollback
 class SpringBootAppApplicationTests {
 
-    @Autowired
-    private UsuarioRepository usuarioRepo;
+    // @Autowired
+    // private UsuarioRepository usuarioRepo;
     
-    @Autowired
-    private PersonagemRepository personagemRepo;
+    // @Autowired
+    // private PersonagemRepository personagemRepo;
 
-    @Autowired
-    private FeiticeiroRepository feiticeiroRepo;
+    // @Autowired
+    // private FeiticeiroRepository feiticeiroRepo;
 
-    @Autowired
-    private LutadorRepository lutadorRepo;
+    // @Autowired
+    // private LutadorRepository lutadorRepo;
     
-    // TESTES PRINCIPAIS
-	@Test
-	void contextLoads() {
-    }
+    // // TESTES PRINCIPAIS
+	// @Test
+	// void contextLoads() {
+    // }
 
-    // TESTES DE INSERIR USUARIO
-    @Test
-    void testaInsercao() {
-        Usuario usuario = new Usuario();
-        usuario.setNomeUsuario("Povs");
-        usuario.setSenha("senha");
-        usuario.setNomeExibicao("teste");
+    // // TESTES DE INSERIR USUARIO
+    // @Test
+    // void testaInsercao() {
+    //     Usuario usuario = new Usuario();
+    //     usuario.setNomeUsuario("Povs");
+    //     usuario.setSenha("senha");
+    //     usuario.setNomeExibicao("teste");
 
-        usuarioRepo.save(usuario);
-        assertNotNull(usuario.getId());
-    }
+    //     usuarioRepo.save(usuario);
+    //     assertNotNull(usuario.getId());
+    // }
 
-    // TESTES DE BUSCA USUARIO
-    @Test
-    void testaBuscaUsuarioNomeContains() {
-        Usuario usuario = new Usuario();
-        usuario.setNomeUsuario("Povs");
-        usuario.setSenha("senha");
-        usuario.setNomeExibicao("teste");
-        usuarioRepo.save(usuario);
+    // // TESTES DE BUSCA USUARIO
+    // @Test
+    // void testaBuscaUsuarioNomeContains() {
+    //     Usuario usuario = new Usuario();
+    //     usuario.setNomeUsuario("Povs");
+    //     usuario.setSenha("senha");
+    //     usuario.setNomeExibicao("teste");
+    //     usuarioRepo.save(usuario);
 
-        List<Usuario> usuarios = usuarioRepo.findByNomeUsuario("Povs");
-        System.out.print(usuarios);
-        assertTrue(!usuarios.isEmpty());
-    }
+    //     List<Usuario> usuarios = usuarioRepo.findByNomeUsuario("Povs");
+    //     System.out.print(usuarios);
+    //     assertTrue(!usuarios.isEmpty());
+    // }
 
     // // Testes de inserir Feiticeiro
     // @Test
@@ -149,22 +149,22 @@ class SpringBootAppApplicationTests {
     // }
 
     // TESTES DE DELETAR USUARIO
-    @Test
-    void testaExcluir() {
-        Usuario usuario = new Usuario();
-        usuario.setNomeUsuario("Povs");
-        usuario.setSenha("senha");
-        usuario.setNomeExibicao("teste");
-        usuarioRepo.save(usuario);
-        assertNotNull(usuario.getId());
+    // @Test
+    // void testaExcluir() {
+    //     Usuario usuario = new Usuario();
+    //     usuario.setNomeUsuario("Povs");
+    //     usuario.setSenha("senha");
+    //     usuario.setNomeExibicao("teste");
+    //     usuarioRepo.save(usuario);
+    //     assertNotNull(usuario.getId());
 
-        Usuario usuarioFindById = usuarioRepo.findById((long)usuario.getId());
-        System.out.print(usuarioFindById);
-        assertTrue(usuarioFindById != null);
+    //     Usuario usuarioFindById = usuarioRepo.findById((long)usuario.getId());
+    //     System.out.print(usuarioFindById);
+    //     assertTrue(usuarioFindById != null);
         
-        usuarioRepo.deleteById(usuarioFindById.getId());
-        Usuario usuarioDelete = usuarioRepo.findById((long)usuario.getId());
-        assertFalse(usuarioDelete != null);
-    }
+    //     usuarioRepo.deleteById(usuarioFindById.getId());
+    //     Usuario usuarioDelete = usuarioRepo.findById((long)usuario.getId());
+    //     assertFalse(usuarioDelete != null);
+    // }
     
 }

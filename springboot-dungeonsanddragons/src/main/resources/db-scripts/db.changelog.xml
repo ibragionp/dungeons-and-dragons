@@ -1,0 +1,35 @@
+<databaseChangeLog  
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"  
+    xmlns:pro="http://www.liquibase.org/xml/ns/pro"  
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd
+    http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-3.8.xsd ">  
+
+
+	<changeSet author="Railson" id="3">
+		<comment>Inserindo o usuário Naruto</comment>
+		<insert tableName="usu_usuario">
+			 <column name="usu_id" value="3" />
+			 <column name="usu_nome_usuario" value="Naruto" />
+			 <column name="usu_senha" value="Hokage" />
+			 <column name="usu_nome_exibicao" value="Uzumaki" />
+			 <column name="usu_administrador" value="Ninja" />
+			 <column name="adm_classificacao" value="2" />
+		</insert>
+   </changeSet>
+
+	<!-- <changeSet author="Railson" id="4">
+		<comment>Inserindo o usuário Naruto</comment>
+		<insert tableName="usu_usuario">
+			 <column name="usu_id" value="4" />
+			 <column name="usu_nome_usuario" value="Nagato" />
+			 <column name="usu_senha" value="Pain" />
+			 <column name="usu_nome_exibicao" value="Akatsuki" />
+			 <column name="usu_administrador" value="Amegakure" />
+			 <column name="adm_classificacao" value="3" />
+		</insert>
+   </changeSet>  -->
+
+</databaseChangeLog>

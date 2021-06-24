@@ -59,7 +59,7 @@
 		<dependency>
 			<groupId>io.springfox</groupId>
 			<artifactId>springfox-swagger-ui</artifactId>
-			<version>2.9.2</version>
+			<version>2.10.5</version>
 		</dependency>
 	</dependencies>
 
@@ -73,7 +73,7 @@
 			<plugin>
 			<groupId>org.liquibase</groupId>
 			<artifactId>liquibase-maven-plugin</artifactId>
-			<version>3.1.0</version>
+			<version>4.4.0</version>
 			<configuration>
 				<changeLogFile>src/main/resources/db-scripts/db.changelog.xml</changeLogFile>
 				<driver>com.mysql.jdbc.Driver</driver>
@@ -86,9 +86,9 @@
 						<goal>update</goal>
 					</goals>
 					<configuration>
-						<url>jdbc:mysql://localhost:3306/DUNGEONS_AND_DRAGONS</url>
-							<username>USER</username>
-							<password>DD123</password>
+						<url>jdbc:mysql://localhost:3306/dungeonsanddragons</url>
+							<username>Railson</username>
+							<password>Mysql123</password>
 					</configuration>
 				</execution>
 			</executions>
@@ -96,7 +96,7 @@
 				<dependency>
 					<groupId>mysql</groupId>
 					<artifactId>mysql-connector-java</artifactId>
-					<version>5.0.4</version>
+					<version>8.0.25</version>
 				</dependency>
 			</dependencies>
 			</plugin>
