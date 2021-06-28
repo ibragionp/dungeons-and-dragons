@@ -1,0 +1,29 @@
+# Created at 2021-06-27T20:49:41.913
+TestSet has not finished before stream error has appeared >> initializing exit by non-null configuration: null
+java.io.EOFException
+	at java.io.DataInputStream.readInt(DataInputStream.java:392)
+	at org.apache.maven.surefire.booter.MasterProcessCommand.decode(MasterProcessCommand.java:115)
+	at org.apache.maven.surefire.booter.CommandReader$CommandRunnable.run(CommandReader.java:391)
+	at java.lang.Thread.run(Thread.java:748)
+
+
+# Created at 2021-06-27T20:49:42.350
+Unexpected IOException with stream: 2021-06-27 20:49:42.350  INFO 12545 --- [           main] c.f.s.SpringBootAppApplicationTests      : Started SpringBootAppApplicationTests in 7.034 seconds (JVM running for 8.943)
+
+
+# Created at 2021-06-27T20:49:42.352
+Unexpected IOException with stream: 2021-06-27 20:49:42.352  INFO 12545 --- [extShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+
+
+# Created at 2021-06-27T20:49:42.359
+Unexpected IOException with stream: 2021-06-27 20:49:42.357  INFO 12545 --- [extShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+
+
+# Created at 2021-06-27T20:49:42.366
+Unexpected IOException with stream: 2021-06-27 20:49:42.365  INFO 12545 --- [extShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+
+
+# Created at 2021-06-27T20:49:42.401
+Unexpected IOException with stream: 2021-06-27 20:49:42.401  INFO 12545 --- [extShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+
+
